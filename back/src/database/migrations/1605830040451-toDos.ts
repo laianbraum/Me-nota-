@@ -18,6 +18,11 @@ export class toDos1605830040451 implements MigrationInterface {
                 {
                     name: 'description',
                     type: 'varchar',
+                },
+                {
+                    name: 'isCompleted',
+                    type: 'boolean',
+                    default: false
                 }
             ]
         }), true)

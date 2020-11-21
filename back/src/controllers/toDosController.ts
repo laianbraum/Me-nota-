@@ -6,13 +6,16 @@ import toDos from '../models/toDos';
 export default{
   async create(request: Request, response: Response){
     const {
-      description,
+      description
     } = request.body;
   
     const toDosRepository = getRepository(toDos);
-  
+
+    const isCompleted = false;
+
     const toDo = toDosRepository.create({
-      description
+      description,
+      isCompleted
     });
     
     await toDosRepository.save(toDo);

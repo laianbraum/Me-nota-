@@ -7,4 +7,7 @@ export default class ToDos {
 
   @Column()
   description: string;
+
+  @Column()
+  isCompleted: boolean;
 }
